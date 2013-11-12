@@ -1,0 +1,11 @@
+--- origsrc/libtaginfo-0.1.6/libtaginfo/Makefile.am	2013-03-06 04:36:52.000000000 -0600
++++ src/libtaginfo-0.1.6/libtaginfo/Makefile.am	2013-11-11 23:00:30.296229300 -0600
+@@ -40,7 +40,7 @@ nobase_taginfo_include_HEADERS = \
+     taginfo_internal.h
+ 
+ taginfo_libincludedir = $(libdir)/libtaginfo/include
+-nodist_taginfo_libinclude_HEADERS = $(top_srcdir)/libtaginfoconfig.h
++nodist_taginfo_libinclude_HEADERS = $(top_builddir)/libtaginfoconfig.h
+ 
+ libtaginfo_la_LIBADD = \
+     $(LIBTAGINFO_LIBS)

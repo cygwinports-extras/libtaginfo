@@ -1,0 +1,22 @@
+--- origsrc/libtaginfo-0.1.6/bindings/c/Makefile.am	2013-03-06 03:19:34.000000000 -0600
++++ src/libtaginfo-0.1.6/bindings/c/Makefile.am	2013-11-11 22:53:18.504532200 -0600
+@@ -18,6 +18,8 @@ lib_LTLIBRARIES = libtaginfo_c.la
+ libtaginfo_c_la_SOURCES = \
+     taginfo_c.cc
+ 
++libtaginfo_c_la_LDFLAGS = -version-info $(LIBTAGINFO_SO_VERSION) -no-undefined
++
+ libtaginfo_c_includedir = $(includedir)/libtaginfo
+ nobase_libtaginfo_c_include_HEADERS = \
+     taginfo_c.h
+--- origsrc/libtaginfo-0.1.6/libtaginfo/Makefile.am	2013-03-06 04:36:52.000000000 -0600
++++ src/libtaginfo-0.1.6/libtaginfo/Makefile.am	2013-11-11 23:00:30.296229300 -0600
+@@ -32,7 +32,7 @@ libtaginfo_la_SOURCES = \
+     wavpackinfo.cc \
+     xiph_common.cc
+ 
+-libtaginfo_la_LDFLAGS = -version-info $(LIBTAGINFO_SO_VERSION)
++libtaginfo_la_LDFLAGS = -version-info $(LIBTAGINFO_SO_VERSION) -no-undefined
+ 
+ taginfo_includedir = $(includedir)/libtaginfo
+ nobase_taginfo_include_HEADERS = \
